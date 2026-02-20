@@ -1,0 +1,122 @@
+.playlist {
+  flex: 1;
+  overflow-y: auto;
+  background: white;
+}
+
+.playlist-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #888;
+  gap: 8px;
+}
+
+.playlist-empty p {
+  margin: 0;
+}
+
+.playlist-empty-hint {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.playlist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  font-family: 'Lucida Grande', Arial, sans-serif;
+}
+
+.playlist-table thead {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
+  border-bottom: 1px solid #999;
+  z-index: 1;
+}
+
+.playlist-table th {
+  padding: 6px 8px;
+  text-align: left;
+  font-weight: 600;
+  color: #2a2a2a;
+  border-right: 1px solid #bbb;
+}
+
+.playlist-table th:last-child {
+  border-right: none;
+}
+
+.playlist-table tbody tr {
+  cursor: pointer;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.playlist-table tbody tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.playlist-table tbody tr:hover {
+  background: linear-gradient(180deg, #d4e9fc 0%, #b8d9f5 100%);
+}
+
+.playlist-table tbody tr.playing {
+  background: linear-gradient(180deg, #5a9fd4 0%, #3d7fb8 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.playlist-table td {
+  padding: 6px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-number {
+  width: 40px;
+  text-align: right;
+}
+
+.col-title {
+  width: 30%;
+  max-width: 300px;
+}
+
+.col-artist {
+  width: 25%;
+  max-width: 200px;
+}
+
+.col-album {
+  width: 25%;
+  max-width: 200px;
+}
+
+.col-duration {
+  width: 60px;
+  text-align: right;
+}
+
+/* Scrollbar styling for iTunes look */
+.playlist::-webkit-scrollbar {
+  width: 15px;
+}
+
+.playlist::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-left: 1px solid #ccc;
+}
+
+.playlist::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #d0d0d0 0%, #b8b8b8 100%);
+  border: 1px solid #999;
+  border-radius: 7px;
+}
+
+.playlist::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #c8c8c8 0%, #b0b0b0 100%);
+}

@@ -1,0 +1,60 @@
+.track-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
+  border-bottom: 1px solid #999;
+}
+
+.album-art {
+  flex-shrink: 0;
+}
+
+.cover-image,
+.cover-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+.cover-placeholder {
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.track-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-artist {
+  font-size: 13px;
+  color: #4a4a4a;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-album {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
